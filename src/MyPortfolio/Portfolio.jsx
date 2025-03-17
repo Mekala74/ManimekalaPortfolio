@@ -47,7 +47,7 @@ const PortfolioPage = () => {
             tech: "java,mysql"
         },
         {
-            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193863/projectCodeFusion_qeljuw.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742213416/fusion_hhcitn.png",
             title: "CodeFusion",
             demoLink: "https://github.com/arul9976/CodeFusion",
             tech: "java,node js,react Js"
@@ -72,6 +72,18 @@ const PortfolioPage = () => {
             title: "Fruit Ninja",
             demoLink: "https://scratch.mit.edu/projects/1040640763",
             tech: "Scratch"
+        },
+        {
+            image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742195574/billJsProject_jiswxo.png",
+            title : "Tip calculator", 
+            demoLink : "https://manimekalaj-4950-8443.zcodeusers.in/jsassignment_024/",
+            tech : "Html,css,java script"
+        },
+        {
+            image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742202586/HotPotato_ndpwyx.jpg",
+            title : "Hot potato",
+            demoLink : "https://github.com/Mekala74/HotPotato",
+            tech : "java"
         }
     ]
 
