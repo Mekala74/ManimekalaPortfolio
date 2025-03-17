@@ -9,51 +9,51 @@ const PortfolioPage = () => {
     const skills = [
         {
             title: "Java",
-            image: "/src/image/java1.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193862/java1_he94uh.png",
         },
         {
             title: "JavaScript",
-            image: "/src/image/javascrip1.png"
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193862/javascrip1_rgx06z.png"
         },
         {
             title: "HTML & CSS",
-            image: "/src/image/htmlandcss1.svg",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/htmlandcss_uem3gj.svg",
         },
         {
             title: "React",
-            image: "/src/image/react1.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/react1_pavlu4.png",
         },
         {
             title: "Scratch",
-            image: "/src/image/Scratch1.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193860/Scratch1_deqw3h.png",
         },
         {
             title: "MySQL",
-            image: "/src/image/mysql1.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193863/mysql1_l2qsbe.png",
         }
     ];
 
     const projects = [
         {
-            image: "/src/image/ArrayList.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193860/ArrayList_cdhk3v.png",
             title: "ArrayList",
             demoLink: "https://github.com/Mekala74/ArrayList",
             tech: "java"
         },
         {
-            image: "/src/image/SchoolManagementSystem.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/SchoolManagementSystem_thitqj.png",
             title: "SchoolManagementSystem",
             demoLink: "https://github.com/Mekala74/SchoolManagement",
             tech: "java,mysal"
         },
         {
-            image: "/src/image/projectCodeFusion.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193863/projectCodeFusion_qeljuw.png",
             title: "CodeFusion",
-            demoLink: "https://example.com/codefusion",
+            demoLink: "https://github.com/arul9976/CodeFusion",
             tech: "java,node js,react Js"
         },
         {
-            image: "/src/image/dairy.jpg",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/dairy_gwwazk.jpg",
             title: "Cadbury",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/project/page.html",
             tech: "Html,css"
@@ -61,14 +61,14 @@ const PortfolioPage = () => {
         }
         ,
         {
-            image: "/src/image/projectJs.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/projectJs_sz6ly5.png",
             title: "Food Sharing",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/jsProject/",
             tech: "java script"
 
         },
         {
-            image: "/src/image/ScratchProejct.png",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/ScratchProejct_bpf6r7.jpg",
             title: "Fruit Ninja",
             demoLink: "https://scratch.mit.edu/projects/1040640763",
             tech: "Scratch"
@@ -104,7 +104,7 @@ const PortfolioPage = () => {
                         <div className="text-container">
                             <div className="text">
                                 <h1>Manimekala</h1>
-                                <p className="title">Backend Developer</p>
+                                <p className="title">Backend Trainee</p>
                                 <p className="description">
                                     Passionate about learning new technologies and building projects.
                                 </p>

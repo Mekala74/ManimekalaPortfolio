@@ -128,7 +128,7 @@ body {
 .image-container {
   width: 500px;
   height: 500px;
-  background-image: url("/src/image/Manimekala.jpg");
+  background-image: url("https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/Manimekala_ft3xaz.jpg");
   background-position: -2px -5px;
   background-size: cover;
   border-radius: 50%;
