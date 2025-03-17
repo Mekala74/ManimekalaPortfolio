@@ -44,7 +44,7 @@ const PortfolioPage = () => {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/SchoolManagementSystem_thitqj.png",
             title: "SchoolManagementSystem",
             demoLink: "https://github.com/Mekala74/SchoolManagement",
-            tech: "java,mysal"
+            tech: "java,mysql"
         },
         {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193863/projectCodeFusion_qeljuw.png",
