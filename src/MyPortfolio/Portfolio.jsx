@@ -151,7 +151,7 @@ const PortfolioPage = () => {
                                             {skill.icon}
                                         </div>
                                     </div>
-                                    <h3>{skill.title}</h3>
+                                    <h3 style={{ fontSize: "18px" }}>{skill.title}</h3>
                                 </div>
                             ))}
                         </div>

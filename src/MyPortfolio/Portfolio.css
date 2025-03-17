@@ -247,7 +247,7 @@ box-shadow: 3px 3px 6px rgba(0, 123, 255, 0.5);
 }
 
 .skill-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #93c5fd;
   margin-top: 15px;
   transition: color 0.3s ease;
@@ -270,6 +270,8 @@ box-shadow: 3px 3px 6px rgba(0, 123, 255, 0.5);
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
+
+
 
 @media (max-width: 768px) {
   .skill-content {
@@ -667,6 +669,37 @@ a:hover {
   .user-menu {
     width: 70%;
   }
+  .skill-card h3 {
+    font-size: 18px;
+    color: #93c5fd;
+    margin-top: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .skill-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 1px auto 13px;
+    position: relative;
+    border-radius: 12px;
+    background: #ffffff1a;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  skill-card {
+    background: #ffffff0d;
+    border-radius: 15px;
+    width: 15%;
+    height: auto;
+    margin-left: 20px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease;
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+
   
   .content {
     width: 75%;
@@ -691,6 +724,9 @@ a:hover {
     width: 23%;
   }
 }
+
+
+
 
 /* MacBook Pro 13", MacBook Air and similar laptops (1024px - 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -767,7 +803,14 @@ a:hover {
   .user-menu {
     width: 90%;
   }
-  
+  .skill-card h3 {
+    font-size: 18px;
+    color: #93c5fd;
+    margin-top: 0px;
+    transition: color .3s ease;
+}
+
+
   .menu-div {
     width: 50%;
   }
@@ -968,6 +1011,14 @@ a:hover {
   .image-container {
     margin-left: 69px;
   }
+  .skill-card h3 {
+    font-size: 18px;
+    color: #93c5fd;
+    margin-top: 0px;
+    transition: color .3s ease;
+}
+
+
   
 }
 
@@ -1120,5 +1171,12 @@ a:hover {
   .image-container {
     margin-left: 69px;
   }
-  
+  .skill-card h3 {
+    font-size: 18px;
+    color: #93c5fd;
+    margin-top: 0px;
+    transition: color .3s ease;
+}
+
+
 }
