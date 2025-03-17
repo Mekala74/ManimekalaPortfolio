@@ -247,7 +247,7 @@ box-shadow: 3px 3px 6px rgba(0, 123, 255, 0.5);
 }
 
 .skill-card h3 {
-  font-size: 18px;
+  font-size: 16px;
   color: #93c5fd;
   margin-top: 15px;
   transition: color 0.3s ease;
@@ -657,20 +657,40 @@ a:hover {
     width: 80%;
     max-width: 1400px;
   }
+  .skill-card {
+    width: 30%;
+    height: auto;
+    margin-left: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
   .skill-card h3 {
     font-size: 15px;
     color: #93c5fd;
     margin-top: 1px;
     transition: color 0.3s ease;
   }
+  
   .circle-4 {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     background: #18318b;
     left: 86%;
     top: 25%;
     animation-delay: 8s;
     
+}
+.circle-2 {
+  width: 280px;
+  height: 280px;
+  background: #18318b;
+  left: 70%;
+  top: 8%;
+  animation-delay: 8s;
 }
   .project-line {
     margin-left: auto;
@@ -695,7 +715,7 @@ a:hover {
     width: 70%;
   }
   .skill-card h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: #93c5fd;
     margin-top: 1px;
     transition: color 0.3s ease;
@@ -711,9 +731,6 @@ a:hover {
     transition: all 0.3s ease;
     overflow: hidden;
   }
- 
-
-
   
   .content {
     width: 75%;
@@ -818,7 +835,7 @@ a:hover {
     width: 90%;
   }
   .skill-card h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: #93c5fd;
     margin-top: 0px;
     transition: color .3s ease;
@@ -1026,7 +1043,7 @@ a:hover {
     margin-left: 69px;
   }
   .skill-card h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: #93c5fd;
     margin-top: 0px;
     transition: color .3s ease;
@@ -1186,7 +1203,7 @@ a:hover {
     margin-left: 69px;
   }
   .skill-card h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: #93c5fd;
     margin-top: 0px;
     transition: color .3s ease;
