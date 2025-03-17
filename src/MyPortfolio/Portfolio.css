@@ -637,3 +637,488 @@ a:hover {
 }
 
 
+
+
+/* Responsive Media Queries for all devices including MacBook laptops */
+
+/* Large Desktops (1440px and above) */
+@media (min-width: 1441px) {
+  .user-menu {
+    width: 50%;
+  }
+  
+  .content {
+    width: 60%;
+  }
+  
+  .project-content {
+    width: 80%;
+    max-width: 1400px;
+  }
+  
+  .project-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* MacBook Pro 16" and similar laptops (1280px - 1440px) */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .user-menu {
+    width: 70%;
+  }
+  
+  .content {
+    width: 75%;
+  }
+  
+  .image-container {
+    width: 450px;
+    height: 450px;
+  }
+  
+  .project-content {
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .project-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .project-card {
+    width: 23%;
+  }
+}
+
+/* MacBook Pro 13", MacBook Air and similar laptops (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .user-menu {
+    width: 80%;
+  }
+  
+  .menu-div {
+    width: 40%;
+  }
+  
+  .content {
+    width: 85%;
+    height: auto;
+    padding: 40px 0;
+  }
+  
+  .text h1 {
+    font-size: 48px;
+  }
+  
+  .image-container {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .skill-container {
+    height: auto;
+    padding: 60px 0;
+  }
+  
+  .skill-content {
+    height: auto;
+  }
+  
+  .skills-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .skill-card {
+    width: 18%;
+    height: auto;
+    margin-left: 0;
+  }
+  
+  .project-container {
+    padding: 60px 0;
+  }
+  
+  .project-content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .project-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .projects-grid {
+    justify-content: center;
+  }
+  
+  .project-card {
+    width: 30%;
+    height: 250px;
+  }
+}
+
+
+/* Tablets and Small Laptops (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .user-menu {
+    width: 90%;
+  }
+  
+  .menu-div {
+    width: 50%;
+  }
+  
+  .content {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  
+  .text-container {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  
+  .text {
+    text-align: center;
+  }
+  
+  .text h1 {
+    font-size: 42px;
+  }
+  
+  .description {
+    max-width: 100%;
+  }
+  
+  .image-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .skill-container {
+    height: auto;
+    padding: 60px 0;
+  }
+  
+  .skill-content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .skills-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skill-card {
+    width: 30%;
+    height: auto;
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .project-container {
+    padding: 60px 0;
+  }
+  
+  .project-content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .project-line {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+  
+  .projects-grid {
+    justify-content: center;
+  }
+  
+  .project-card {
+    width: 45%;
+    height: 250px;
+  }
+}
+
+
+
+/* Tablets and Large Phones (480px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .portfolio-header {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .user-menu {
+    width: 95%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .name-div {
+    font-size: 24px;
+  }
+  
+  .menu-div {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .content-container {
+    padding-top: 120px;
+  }
+  
+  .content {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .text-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .text {
+    text-align: center;
+  }
+  
+  .text h1 {
+    font-size: 36px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .description {
+    max-width: 100%;
+  }
+  
+  .image-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .skill-container {
+    height: auto;
+    padding: 40px 0;
+  }
+  
+  .skill-content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .skill-content h2 {
+    font-size: 30px;
+  }
+  
+  .skills-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .skill-card {
+    width: 45%;
+    height: auto;
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .project-container {
+    padding: 40px 0;
+  }
+  
+  .project-content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .project-content h2 {
+    font-size: 30px;
+  }
+  
+  .project-line {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+  }
+  
+  .projects-grid {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    width: 80%;
+    height: 250px;
+  }
+  .image-container {
+    margin-left: 69px;
+  }
+  
+}
+
+/* Mobile Phones (479px and below) */
+@media (max-width: 480px) {
+  .portfolio-header {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .user-menu {
+    width: 95%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .name-div {
+    font-size: 22px;
+  }
+  
+  .menu-div {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+  }
+  
+  .content-container {
+    padding-top: 120px;
+  }
+  
+  .content {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .text-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .text {
+    text-align: center;
+  }
+  
+  .text h1 {
+    font-size: 28px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .description {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  
+  .image-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .skill-container {
+    height: auto;
+    padding: 40px 0;
+  }
+  
+  .skill-content {
+    width: 95%;
+    height: auto;
+  }
+  
+  .skill-content h2 {
+    font-size: 24px;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .skill-card {
+    width: 90%;
+    height: auto;
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .skill-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .project-container {
+    padding: 40px 0;
+  }
+  
+  .project-content {
+    width: 95%;
+    height: auto;
+  }
+  
+  .project-content h2 {
+    font-size: 24px;
+  }
+  
+  .project-line {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+  }
+  
+  .projects-grid {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    width: 90%;
+    height: 220px;
+  }
+  
+  .project-overlay h4 {
+    font-size: 16px;
+  }
+  
+  .tech-badge {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .footer {
+    height: auto;
+    padding: 15px 0;
+  }
+  
+  .style {
+    font-size: 14px;
+  }
+  
+  .floating-circle {
+    display: none;
+  }
+  .image-container {
+    margin-left: 69px;
+  }
+  
+}
