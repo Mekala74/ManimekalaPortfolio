@@ -86,9 +86,6 @@ const PortfolioPage = () => {
             tech : "java"
         }
     ]
-
-
-
     return (
         <>
             <div className="portfolio-container">
