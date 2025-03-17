@@ -8,10 +8,7 @@ import PortfolioPage from './MyPortfolio/Portfolio'
 function App() {
 
   return (
-    <Routes>
-      <Route path='/Portfolio' element={<PortfolioPage/>} />
-    </Routes>
-
+    <PortfolioPage/>
   )
 }
 
