@@ -3,6 +3,8 @@
 import { useState } from "react"
 import React from "react";
 import "./Portfolio.css";
+import { useEffect } from "react";
+
 import { Code, Home, Cpu, ExternalLink, Info, Coffee, FileJson, Atom, Blocks, Database } from "lucide-react"
 
 const PortfolioPage = () => {
@@ -31,7 +33,7 @@ const PortfolioPage = () => {
             title: "Scratch",
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193860/Scratch1_deqw3h.png",
         },
-       
+
     ];
 
     const projects = [
@@ -60,14 +62,6 @@ const PortfolioPage = () => {
             tech: "java"
         },
         {
-            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/dairy_gwwazk.jpg",
-            title: "Cadbury",
-            demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/project/page.html",
-            tech: "HTMLCSS"
-
-        }
-        ,
-        {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/projectJs_sz6ly5.png",
             title: "Food Sharing",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/jsProject/",
@@ -75,37 +69,72 @@ const PortfolioPage = () => {
 
         },
         {
-            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/ScratchProejct_bpf6r7.jpg",
-            title: "Fruit Ninja",
-            demoLink: "https://scratch.mit.edu/projects/1040640763",
-            tech: "Scratch"
-        },
-        {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742195574/billJsProject_jiswxo.png",
             title: "Tip calculator",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/jsassignment_024/",
             tech: "HTMLCSS,javaScript"
         },
-        
         {
-            image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742275190/AppleCatch_apkpyj.png",
-            title : "Catch Game",
-            demoLink : "https://scratch.mit.edu/projects/1030309387/fullscreen/",
-            tech : "Scratch"
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/dairy_gwwazk.jpg",
+            title: "Cadbury",
+            demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/project/page.html",
+            tech: "HTMLCSS"
+
+        }
+        ,
+
+        {
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/ScratchProejct_bpf6r7.jpg",
+            title: "Fruit Ninja",
+            demoLink: "https://scratch.mit.edu/projects/1040640763",
+            tech: "Scratch"
+        },
+
+
+        {
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742275190/AppleCatch_apkpyj.png",
+            title: "Catch Game",
+            demoLink: "https://scratch.mit.edu/projects/1030309387/fullscreen/",
+            tech: "Scratch"
         }
     ]
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ["home", "skills", "projects"];
+            let currentSection = "home";
+
+            sections.forEach((id) => {
+                const section = document.getElementById(id);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        currentSection = id;
+                    }
+                }
+            });
+
+            setActiveTab(currentSection);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const techCategories = ["All", "Java", "JavaScript", "HTMLCSS", "Scratch"];
     const [selectedTech, setSelectedTech] = useState("All");
 
     const filteredProjects = selectedTech === "All"
-    ? projects.slice(0, 8) 
-    : projects.filter(project =>
-        project.tech
-            .toLowerCase()
-            .split(",") 
-            .map(tech => tech.trim()) 
-            .includes(selectedTech.toLowerCase().replace(" ", "").replace("/", "").trim()) 
-    );
+        ? projects.slice(0, 8)
+        : projects.filter(project =>
+            project.tech
+                .toLowerCase()
+                .split(",")
+                .map(tech => tech.trim())
+                .includes(selectedTech.toLowerCase().replace(" ", "").replace("/", "").trim())
+        );
+    const [activeTab, setActiveTab] = useState("home");
+
 
     return (
         <>
@@ -114,18 +143,28 @@ const PortfolioPage = () => {
                     <div className="user-menu">
                         <div className="name-div">Portfolio</div>
                         <div className="menu-div">
-                            <a href="#home" className="nav-link">
+                            <a
+                                href="#home"
+                                className={`nav-link ${activeTab === "home" ? "active-link" : ""}`}
+                            >
                                 <Home size={18} className="nav-icon" />
                                 Home
                             </a>
-                            <a href="#skills" className="nav-link">
+                            <a
+                                href="#skills"
+                                className={`nav-link ${activeTab === "skills" ? "active-link" : ""}`}
+                            >
                                 <Cpu size={18} className="nav-icon" />
                                 Skills
                             </a>
-                            <a href="#projects" className="nav-link">
+                            <a
+                                href="#projects"
+                                className={`nav-link ${activeTab === "projects" ? "active-link" : ""}`}
+                            >
                                 <Code size={18} className="nav-icon" />
                                 Projects
                             </a>
+
                         </div>
                     </div>
                 </div>
