@@ -74,18 +74,34 @@ const PortfolioPage = () => {
             tech: "Scratch"
         },
         {
-            image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742195574/billJsProject_jiswxo.png",
-            title : "Tip calculator", 
-            demoLink : "https://manimekalaj-4950-8443.zcodeusers.in/jsassignment_024/",
-            tech : "Html,css,java script"
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742195574/billJsProject_jiswxo.png",
+            title: "Tip calculator",
+            demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/jsassignment_024/",
+            tech: "Html,css,java script"
         },
         {
-            image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742202586/HotPotato_ndpwyx.jpg",
-            title : "Hot potato",
-            demoLink : "https://github.com/Mekala74/HotPotato",
-            tech : "java"
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742202586/HotPotato_ndpwyx.jpg",
+            title: "Hot potato",
+            demoLink: "https://github.com/Mekala74/HotPotato",
+            tech: "java"
+        },
+        {
+            image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742275190/AppleCatch_apkpyj.png",
+            title : "Catch Game",
+            demoLink : "https://scratch.mit.edu/projects/1030309387/fullscreen/",
+            tech : "Scratch"
         }
     ]
+    const techCategories = ["All", "Java", "Java Script", "HTML/CSS", "Scratch"];
+    const [selectedTech, setSelectedTech] = useState("All");
+
+    // Function to filter projects
+    const filteredProjects = selectedTech === "All"
+        ?  projects.slice(0, 8)
+        : projects.filter(project =>
+            project.tech.toLowerCase().includes(selectedTech.toLowerCase().replace("/", ","))
+        );
+
     return (
         <>
             <div className="portfolio-container">
@@ -113,7 +129,7 @@ const PortfolioPage = () => {
                         <div className="text-container">
                             <div className="text">
                                 <h1>Manimekala</h1>
-                                <p className="title">Backend Trainee</p>
+                                <p className="title">Backend Developer</p>
                                 <p className="description">
                                     Passionate about learning new technologies and building projects.
                                 </p>
@@ -159,27 +175,42 @@ const PortfolioPage = () => {
                     <div className="project-content">
                         <h2>Projects</h2>
                         <div className="project-line"></div>
+
+                        {/* Filter Buttons */}
+                        <div className="filter-buttons">
+                            {techCategories.map((tech, index) => (
+                                <button
+                                    key={index}
+                                    className={`filter-button ${selectedTech === tech ? "active" : ""}`}
+                                    onClick={() => setSelectedTech(tech)}
+                                >
+                                    {tech}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Project Grid */}
                         <div className="projects-grid">
-                            {projects.map((project, index) => (
+                            {filteredProjects.map((project, index) => (
                                 <div key={index} className="project-card">
                                     <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
                                         <img src={project.image} alt={project.title} className="project-image" />
                                         <h3 className="project-title">{project.title}</h3>
-                                    <div className="project-overlay">
-                                        <h4>Tech Stack</h4>
-                                        <div className="tech-icons">
-                                            {project.tech.split(",").map((tech, i) => (
-                                                <span key={i} className="tech-badge">{tech.trim()}</span>
-                                            ))}
+                                        <div className="project-overlay">
+                                            <h4>Tech Stack</h4>
+                                            <div className="tech-icons">
+                                                {project.tech.split(",").map((tech, i) => (
+                                                    <span key={i} className="tech-badge">{tech.trim()}</span>
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
                                     </a>
                                 </div>
                             ))}
                         </div>
-
                     </div>
                 </div>
+
             </div>
             <div className="footer">
                 <p className="style"> ZSTTK398 | manimekala.j@zohocorp.com</p>
