@@ -16,6 +16,10 @@ const PortfolioPage = () => {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193862/javascrip1_rgx06z.png"
         },
         {
+            title: "MySQL",
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193863/mysql1_l2qsbe.png",
+        },
+        {
             title: "HTML & CSS",
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/htmlandcss_uem3gj.svg",
         },
@@ -27,10 +31,7 @@ const PortfolioPage = () => {
             title: "Scratch",
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193860/Scratch1_deqw3h.png",
         },
-        {
-            title: "MySQL",
-            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193863/mysql1_l2qsbe.png",
-        }
+       
     ];
 
     const projects = [
@@ -53,10 +54,16 @@ const PortfolioPage = () => {
             tech: "java,node js,react Js"
         },
         {
+            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742202586/HotPotato_ndpwyx.jpg",
+            title: "Hot potato",
+            demoLink: "https://github.com/Mekala74/HotPotato",
+            tech: "java"
+        },
+        {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193861/dairy_gwwazk.jpg",
             title: "Cadbury",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/project/page.html",
-            tech: "Html,css"
+            tech: "HTMLCSS"
 
         }
         ,
@@ -64,7 +71,7 @@ const PortfolioPage = () => {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742193864/projectJs_sz6ly5.png",
             title: "Food Sharing",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/jsProject/",
-            tech: "java script"
+            tech: "HTMLCSS,javaScript"
 
         },
         {
@@ -77,14 +84,9 @@ const PortfolioPage = () => {
             image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742195574/billJsProject_jiswxo.png",
             title: "Tip calculator",
             demoLink: "https://manimekalaj-4950-8443.zcodeusers.in/jsassignment_024/",
-            tech: "Html,css,java script"
+            tech: "HTMLCSS,javaScript"
         },
-        {
-            image: "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742202586/HotPotato_ndpwyx.jpg",
-            title: "Hot potato",
-            demoLink: "https://github.com/Mekala74/HotPotato",
-            tech: "java"
-        },
+        
         {
             image : "https://res.cloudinary.com/dd4aje6hu/image/upload/v1742275190/AppleCatch_apkpyj.png",
             title : "Catch Game",
@@ -92,15 +94,18 @@ const PortfolioPage = () => {
             tech : "Scratch"
         }
     ]
-    const techCategories = ["All", "Java", "Java Script", "HTML/CSS", "Scratch"];
+    const techCategories = ["All", "Java", "JavaScript", "HTMLCSS", "Scratch"];
     const [selectedTech, setSelectedTech] = useState("All");
 
-    // Function to filter projects
     const filteredProjects = selectedTech === "All"
-        ?  projects.slice(0, 8)
-        : projects.filter(project =>
-            project.tech.toLowerCase().includes(selectedTech.toLowerCase().replace("/", ","))
-        );
+    ? projects.slice(0, 8) 
+    : projects.filter(project =>
+        project.tech
+            .toLowerCase()
+            .split(",") 
+            .map(tech => tech.trim()) 
+            .includes(selectedTech.toLowerCase().replace(" ", "").replace("/", "").trim()) 
+    );
 
     return (
         <>
